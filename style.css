@@ -313,7 +313,7 @@ html {
 
 /* Apply initial scale for the screenImage */
 .screenImage20 {
-    animation: scaleDown .1s forwards;
+    animation: scaleDown .01s forwards;
 }
 
 /* Navigation */

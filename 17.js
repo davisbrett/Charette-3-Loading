@@ -1,6 +1,6 @@
 document.getElementById("shutter17").addEventListener("click", function () {
     var images = document.querySelectorAll('.screenImage');
-    var delay = 80;
+    var delay = 100;
 
     images.forEach(function (image, index) {
         setTimeout(function () {

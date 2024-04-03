@@ -19,7 +19,7 @@ function toggleImages() {
 // Event listener for the shutter button
 document.getElementById("shutter19").addEventListener("click", function () {
     // Toggle images every second
-    setInterval(toggleImages, 700);
+    setInterval(toggleImages, 1000);
 
     // Remove the event listener to prevent further clicks
     document.getElementById("shutter19").removeEventListener("click", arguments.callee);
