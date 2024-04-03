@@ -6,6 +6,8 @@ document.addEventListener('keydown', function (event) {
             window.location.href = '20.html';
         } else if (currentUrl.endsWith('01.html')) {
             window.location.href = 'index.html';
+        } else if (currentUrl.endsWith('02.html')) { // Added condition for '02.html' case
+            window.location.href = 'index.html';
         } else {
             navigateToPreviousPage();
         }
