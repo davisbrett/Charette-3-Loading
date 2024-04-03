@@ -1,0 +1,419 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.backgroundImageImage {
+    width: 200vw;
+    z-index: -3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 70%;
+}
+
+.cameraShell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.camera {
+    width: 70vw;
+    height: auto;
+    z-index: 1;
+}
+
+.clickElements {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clickElements {
+    width: 6vw;
+}
+
+.shutter {
+    width: 7vw;
+    position: fixed;
+    left: -6.4vw;
+    top: -16.7vw;
+    z-index: 9999;
+}
+
+.leftButton,
+.rightButton {
+    width: 2.3vw;
+    position: fixed;
+    left: -9.2vw;
+    top: 6.6vw;
+    z-index: 9999;
+    opacity: 75%;
+}
+
+.rightButton {
+    position: fixed;
+    left: -2.52vw;
+}
+
+.shutter:hover,
+.leftButton:hover,
+.rightButton:hover {
+    cursor: pointer;
+}
+
+.viewFinder {
+    width: 9.1vw;
+    height: auto;
+    opacity: 100%;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.viewFinderImage {
+    width: 9.1vw;
+    position: fixed;
+    left: -32.2vw;
+    top: -17vw
+}
+
+.screen {
+    width: 31.4vw;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.screenImage {
+    width: 36.6vw;
+    position: fixed;
+    left: -35.94vw;
+    top: -3.6vw;
+    opacity: 100%;
+}
+
+.blackBackground {
+    width: 31.4vw;
+    height: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -2;
+}
+
+.blackBackgroundImage {
+    width: 36.6vw;
+    position: fixed;
+    left: -35.94vw;
+    top: 6.6vw;
+    opacity: 100%;
+}
+
+/* 1 */
+.screenImage1 {
+    opacity: 0;
+}
+
+/* 2 */
+#screenImage2 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 3 */
+#screenImage3 {
+    opacity: 0;
+}
+
+/* 4 */
+.screenImage4 {
+    opacity: 0;
+}
+
+/* 5 */
+.screenImage5 {
+    opacity: 0;
+}
+
+/* 6 */
+.screenImage6 {
+    opacity: 0;
+}
+
+/* 7 */
+.screenImage7 {
+    opacity: 0;
+}
+
+
+/* 8 */
+.screenImage8 {
+    opacity: 0;
+}
+
+/* 9 */
+.screenImage9 {
+    opacity: 0;
+}
+
+/* 11 */
+.screenImage11 {
+    opacity: 0;
+}
+
+/* 12 */
+.screenImage12 {
+    opacity: 0;
+}
+
+/* 13 */
+.screenImage13 {
+    opacity: 0;
+}
+
+/* 14 */
+.screenImage14 {
+    opacity: 0;
+}
+
+/* 15 */
+.screenImage15 {
+    opacity: 0;
+}
+
+/* From https://codepen.io/_fbrz/pen/oNyyop */
+#loader {
+    animation: animate 1.5s linear infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    left: -20.5vw;
+    top: 15vw;
+    z-index: -4;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(220deg)
+    }
+}
+
+#loader:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    content: '';
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+}
+
+@keyframes animate2 {
+    0% {
+        box-shadow: inset #fff 0 0 0 17px;
+        transform: rotate(-140deg);
+    }
+
+    50% {
+        box-shadow: inset #fff 0 0 0 2px;
+    }
+
+    100% {
+        box-shadow: inset #fff 0 0 0 17px;
+        transform: rotate(140deg);
+    }
+}
+
+/* 16 */
+
+.backgroundImageImage {
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.backgroundImageImage.transparent {
+    opacity: 0;
+}
+
+.screenImage16 {
+    opacity: 0;
+}
+
+/* 17 */
+.screenImage17 {
+    opacity: 0;
+}
+
+/* 18 */
+
+/* Initially hide the screenImage */
+.screenImage18 {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: opacity 1.5s, transform 1.5s;
+    overflow: hidden;
+}
+
+/* Apply transition effects when the screenImage becomes visible */
+.screenImage18.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 20 */
+@keyframes scaleDown {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Apply initial scale for the screenImage */
+.screenImage20 {
+    animation: scaleDown .1s forwards;
+}
+
+/* Navigation */
+.navigation {
+    width: 36.6vw;
+    height: 24vw;
+    position: absolute;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    left: 42vw;
+    top: 66%;
+}
+
+.navigationInside {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 columns */
+    grid-template-rows: repeat(4, 1fr);
+    gap: .5vw;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.navigation {
+    width: 0vw;
+    height: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.navigationInside {
+    display: none;
+    width: 34.6vw;
+    position: fixed;
+    left: -50.65vw;
+    top: 9vw;
+    opacity: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 0vw;
+    z-index: 2;
+}
+
+.grid-item {
+    background-color: #ccc;
+    border: 3px solid #000000;
+    padding: 0px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.menuButton {
+    border-radius: 100%;
+    height: 3.5vw;
+    width: 3.5vw;
+    opacity: 60%;
+    background-color: #8b0b0b;
+    z-index: 2;
+    position: relative;
+    left: -7.7vw;
+    top: 17.5vw;
+    z-index: 99999;
+}
+
+.instructions {
+    height: 4vw;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    left: 0vw;
+    top: -16vw;
+    z-index: 99999;
+}
+
+
+.grid-item img:hover {
+    box-shadow: 0 0 0 3px #cfab3f;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+}
+
+.grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    cursor: pointer;
+}
