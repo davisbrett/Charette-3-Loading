@@ -1,10 +1,10 @@
 document.getElementById("shutter4").addEventListener("click", function () {
     var images = document.querySelectorAll('.screenImage');
-    var delay = 100; // Delay between each image appearing in milliseconds
+    var delay = 100;
 
     images.forEach(function (image, index) {
         setTimeout(function () {
-            image.style.opacity = "1"; // Gradually make each image appear
+            image.style.opacity = "1";
         }, delay * index);
     });
 });

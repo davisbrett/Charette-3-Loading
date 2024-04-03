@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     menuButton.addEventListener("click", function () {
         if (isVisible) {
             navigationInside.style.display = "none";
-            blackBackground.style.zIndex = -2; // Hide blackBackground
+            blackBackground.style.zIndex = -2;
         } else {
             navigationInside.style.display = "grid";
-            blackBackground.style.zIndex = -1; // Bring blackBackground to front
+            blackBackground.style.zIndex = -1;
         }
 
         isVisible = !isVisible;
